@@ -914,6 +914,7 @@ public class AWSIotMqttManager {
 
             clientSocketFactory = socketFactory;
             options.setSocketFactory(clientSocketFactory);
+            options.setMaxInflight(200);
 
             mqttConnect(options);
         } catch (final NoSuchAlgorithmException e) {
